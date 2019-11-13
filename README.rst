@@ -17,7 +17,7 @@ Dependencies
 Installation
 ------------
 
-    python3 setup.py install
+    python setup.py install
 
 A projects allowing scalable hierarchical clustering, thanks to an
 approximated version of OPTICS, on arbitrary data and distance measures.
