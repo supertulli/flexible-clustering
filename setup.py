@@ -43,6 +43,8 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
+import numpy    
+    
 setup(
     name='flexible_clustering',
 
@@ -133,5 +135,6 @@ setup(
 #        ],
 #    },
     
-    ext_modules = cythonize("flexible_clustering/unionfind.pyx"),
+    ext_modules = cythonize("flexible_clustering/unionfind.pyx", language_level = "3"),
+    include_dirs=[numpy.get_include()]
 )
